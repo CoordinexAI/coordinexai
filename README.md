@@ -1,23 +1,48 @@
-# CoordinexAI
+# 🌀 CoordinexAI
 
-An AI-powered Streamlit app that detects coordination friction in team communications. Now supports real Slack integration.
+> Detect the friction before it becomes failure.
 
-## Features
-- Pulls Slack message threads via API
-- Analyzes for delays, vague requests, and repeated nudges
-- Outputs a friction score
+**The Friction Constant** is the silent drag that slows down teams:  
+missed handoffs, delays, vague tasks, and “just checking in” loops.
 
-## Run Locally
-```bash
-pip install -r requirements.txt
-streamlit run app/main.py
-```
+**CoordinexAI** detects that drag before it snowballs—giving you the nudges and insights you didn’t know you needed.
 
-## Secrets Configuration
-Store your Slack Bot Token in `.streamlit/secrets.toml`:
-```toml
-SLACK_TOKEN = "xoxb-your-token"
-```
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://coordinexai.streamlit.app)
 
-## Deployment
-Push to GitHub and deploy via [Streamlit Cloud](https://share.streamlit.io).
+---
+
+## 🛠 What It Does
+
+- Connects to Slack  
+- Analyzes conversations for delays, vagueness, and dropped threads  
+- Scores threads using a Friction Index  
+- Surfaces coordination breakdowns with clear prompts  
+
+---
+
+## 🧪 Try It Free
+
+🔗 **Launch App**: [https://coordinexai.streamlit.app](https://coordinexai.streamlit.app)
+
+📩 **Request a Friction Report** (no login):  
+[https://tally.so/r/nO1EXX](https://tally.so/r/nO1EXX) ← *(replace this with your actual Tally form link)*
+
+---
+
+## 💡 Use Cases
+
+- Founders managing async teams  
+- Chiefs of Staff tracking execution  
+- Project Managers identifying blockers  
+- Ops teams cleaning up coordination chaos  
+
+---
+
+## 📌 Built With
+
+- Python · Streamlit · Slack API · GPT · GitHub  
+
+> _“If you can’t see your friction, you can’t fix your flow.”_
+
+---
+
