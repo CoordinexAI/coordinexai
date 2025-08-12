@@ -1,2 +1,7 @@
+uagents
+python-dotenv
 streamlit
 slack_sdk
+fastapi
+uvicorn
+requests
