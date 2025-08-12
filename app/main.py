@@ -1,8 +1,29 @@
 import streamlit as st
 import datetime
+import requests
 from slack_sdk import WebClient
 
 st.title("CoordinexAI: Friction Detector with Slack")
+
+KAPPA_API = "http://localhost:8000/kappa"
+
+
+def fetch_kappa():
+    try:
+        resp = requests.get(KAPPA_API, timeout=5)
+        if resp.ok:
+            return resp.json()
+    except Exception as e:
+        st.error(f"Kappa fetch failed: {e}")
+    return None
+
+st.sidebar.button("Refresh κ")
+kappa_data = fetch_kappa()
+if kappa_data and kappa_data.get("kappa") is not None:
+    st.metric("κ", kappa_data["kappa"])
+    st.caption(f"Updated: {kappa_data['date']}")
+else:
+    st.write("No κ data available.")
 
 SLACK_TOKEN = st.secrets["SLACK_TOKEN"]
 CHANNEL_ID = st.text_input("Slack Channel ID", "")

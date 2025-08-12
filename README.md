@@ -46,3 +46,18 @@ missed handoffs, delays, vague tasks, and “just checking in” loops.
 
 ---
 
+
+## Running the Agents
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\activate.bat
+pip install -r requirements.txt
+
+# Terminals:
+.\.venv\Scripts\python.exe -m agents.ingestor_agent.main
+.\.venv\Scripts\python.exe -m agents.analytics_agent.main
+\.venv\Scripts\python.exe -m backend.main
+\.venv\Scripts\streamlit.exe run app/main.py
+```
+
